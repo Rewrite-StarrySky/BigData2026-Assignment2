@@ -77,14 +77,16 @@ python course_repo/scripts/preprocess.py --raw raw_gharchive --out preprocessed
 # 4a. reproduce the submitted file from the stored weights of the submitted model (no training; a CPU is enough, about a minute)
 ASG2_DATA_ROOT=course_repo ASG2_DB_DIR=preprocessed/db python -m scripts.predict --weights results/final_gnn_weights.pt --out output_315581033.csv
 
-# 4b. or train from scratch and predict (GPU with about 16 GB memory: about 11 minutes; on a CPU it takes many hours)
+# 4b. or train from scratch and predict (GPU with about 16 GB memory: about 15 minutes; on a CPU it takes many hours)
 ASG2_DATA_ROOT=course_repo ASG2_DB_DIR=preprocessed/db python -m scripts.predict --out output_315581033.csv
 ```
 
 * **Period.**  The submitted model was built from the hour files of **2026-06-01 00:00 UTC to 2026-11-21 12:00 UTC** and the prediction cutoff
   **2026-11-21 12:00 UTC** (`FINAL_CUTOFF`; the target week starts 4 h later).  Data at or after `DATA_CAP` = 2026-11-21 12:00 UTC is ignored, so a re-run
   with more raw hours (for example after the test week) gives the same snapshots and the same training set; a warning is printed if the tables contain rows from before 2026-06-01.
-  GH Archive itself has no file for 06-24 08h, 08-28 02h, 10-04 01h, 10-21 06h (UTC).
+  The first download (2026-11-11, used for all validation experiments) did not get the hour files 06-24 08h, 08-28 02h, 10-04 01h, 10-21 06h (UTC); they exist on GH Archive and
+  are part of the final download, so the final model is built from all 4,164 hour files of the period
+  (`scripts/download_gharchive.sh` retries failed downloads and lists every hour it could not get).
 * **Determinism.**  The network does not depend on the row numbers of the tables (a graph has no node order), the seeds are fixed and the deterministic CUDA algorithms are switched on:
   two training runs on the same machine give identical weights.  On other hardware or library versions the last digits of the weights can differ, which can move a few
   borderline users; the stored weights (`results/final_gnn_weights.pt`) reproduce the submitted predictions without training (4a).
