@@ -1,0 +1,56 @@
+{
+ "origin": "2026-09-26 12:00:00",
+ "week_taiwan": "2026/09/27 00:00 - 10/04 00:00",
+ "n_users": 6085,
+ "evaluate_py_output": "Format check: no errors (6085 users)\n  open_pr            F1  48.50%\n  open_issue         F1  47.56%\n  issue_comment      F1  46.31%\n  pr_review          F1  49.48%\n  pr_review_comment  F1  46.10%\n  push               F1  72.99%\nmacro-F1: 51.82%\nmicro-F1: 60.56%\nScore:    56.19%\n",
+ "final_model": {
+  "macro": 51.82,
+  "micro": 60.56,
+  "score": 56.19
+ },
+ "copy_last_week_on_our_users": {
+  "macro": 43.54,
+  "micro": 56.26,
+  "score": 49.9
+ },
+ "course_readme_reference": {
+  "Random": {
+   "macro": 19.77,
+   "micro": 22.74,
+   "score": 21.26
+  },
+  "Predict all 0": {
+   "macro": 0.0,
+   "micro": 0.0,
+   "score": 0.0
+  },
+  "Copy last week": {
+   "macro": 43.01,
+   "micro": 56.2,
+   "score": 49.61
+  },
+  "GNN without time encoding": {
+   "macro": 22.8,
+   "micro": 48.61,
+   "score": 35.7
+  },
+  "GNN with time encoding": {
+   "macro": 50.9,
+   "micro": 58.74,
+   "score": 54.82
+  }
+ },
+ "true_rate": {
+  "open_pr": 0.093,
+  "open_issue": 0.0552,
+  "issue_comment": 0.074,
+  "pr_review": 0.0684,
+  "pr_review_comment": 0.0482,
+  "push": 0.4176
+ },
+ "feature_baseline_xgb": {
+  "macro": 51.76,
+  "micro": 60.54,
+  "score": 56.15
+ }
+}

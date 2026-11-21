@@ -1,0 +1,10 @@
+{
+ "cutoff": "2026-10-03 12:00",
+ "users_compared": 4454,
+ "max_abs_probability_difference": 0.027016684412956238,
+ "mean_abs_probability_difference": 2.660878661904862e-05,
+ "users_with_a_difference_above_0_001": 30,
+ "users_with_a_difference_above_0_01": 12,
+ "identical_01_predictions_share": 1.0,
+ "users_with_a_different_01_prediction": 0
+}

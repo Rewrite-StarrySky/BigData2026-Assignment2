@@ -1,0 +1,12 @@
+# the course data (clone it here, see README) and every derived cache
+assignment2/
+cache/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+slides/preview/
+course_repo/
+raw_gharchive/
+preprocessed/
+output_*.csv

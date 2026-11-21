@@ -1,0 +1,187 @@
+{
+ "share_of_total_gain": {
+  "open_pr": {
+   "FK lifecycle": 0.1691,
+   "cohort context": 0.1611,
+   "repository multi-hop": 0.0273,
+   "temporal: other activities": 0.3,
+   "temporal: same activity": 0.3178,
+   "work in progress": 0.0247
+  },
+  "open_issue": {
+   "FK lifecycle": 0.0693,
+   "cohort context": 0.072,
+   "repository multi-hop": 0.0347,
+   "temporal: other activities": 0.1688,
+   "temporal: same activity": 0.6153,
+   "work in progress": 0.0399
+  },
+  "issue_comment": {
+   "FK lifecycle": 0.0421,
+   "cohort context": 0.1568,
+   "repository multi-hop": 0.0808,
+   "temporal: other activities": 0.2297,
+   "temporal: same activity": 0.4721,
+   "work in progress": 0.0184
+  },
+  "pr_review": {
+   "FK lifecycle": 0.0396,
+   "cohort context": 0.115,
+   "repository multi-hop": 0.0423,
+   "temporal: other activities": 0.149,
+   "temporal: same activity": 0.476,
+   "work in progress": 0.178
+  },
+  "pr_review_comment": {
+   "FK lifecycle": 0.042,
+   "cohort context": 0.1251,
+   "repository multi-hop": 0.0375,
+   "temporal: other activities": 0.3128,
+   "temporal: same activity": 0.4375,
+   "work in progress": 0.0452
+  },
+  "push": {
+   "FK lifecycle": 0.0528,
+   "cohort context": 0.0564,
+   "repository multi-hop": 0.0235,
+   "temporal: other activities": 0.1002,
+   "temporal: same activity": 0.7595,
+   "work in progress": 0.0077
+  }
+ },
+ "top5_features": {
+  "open_pr": [
+   [
+    "open_pr_ewma_h14",
+    0.2271
+   ],
+   [
+    "glob_push_n7d",
+    0.0826
+   ],
+   [
+    "total_ewma_h3",
+    0.0557
+   ],
+   [
+    "total_days_since_last",
+    0.048
+   ],
+   [
+    "i_merged_pr_days_since_last",
+    0.0475
+   ]
+  ],
+  "open_issue": [
+   [
+    "open_issue_ewma_h14",
+    0.2858
+   ],
+   [
+    "open_issue_days_since_last",
+    0.2046
+   ],
+   [
+    "open_issue_ewma_h3",
+    0.0635
+   ],
+   [
+    "glob_push_n7d",
+    0.0281
+   ],
+   [
+    "ow_my_open_issues",
+    0.0272
+   ]
+  ],
+  "issue_comment": [
+   [
+    "issue_comment_ewma_h3",
+    0.182
+   ],
+   [
+    "issue_comment_days_since_last",
+    0.1238
+   ],
+   [
+    "issue_comment_ewma_h14",
+    0.077
+   ],
+   [
+    "glob_push_n7d",
+    0.0761
+   ],
+   [
+    "issue_comment_n90d",
+    0.0748
+   ]
+  ],
+  "pr_review": [
+   [
+    "pr_review_days_since_last",
+    0.2444
+   ],
+   [
+    "ow_open_reviewed_prs_28d",
+    0.1449
+   ],
+   [
+    "pr_review_n90d",
+    0.0978
+   ],
+   [
+    "pr_review_ewma_h14",
+    0.0834
+   ],
+   [
+    "glob_push_n7d",
+    0.0497
+   ]
+  ],
+  "pr_review_comment": [
+   [
+    "pr_review_comment_days_since_last",
+    0.2744
+   ],
+   [
+    "pr_review_days_since_last",
+    0.0887
+   ],
+   [
+    "pr_review_comment_ewma_h14",
+    0.0874
+   ],
+   [
+    "glob_push_n28d",
+    0.0447
+   ],
+   [
+    "glob_push_n7d",
+    0.0444
+   ]
+  ],
+  "push": [
+   [
+    "push_ewma_h3",
+    0.2802
+   ],
+   [
+    "push_active_days28",
+    0.2239
+   ],
+   [
+    "push_days_since_last",
+    0.1362
+   ],
+   [
+    "push_n90d",
+    0.0384
+   ],
+   [
+    "push_side_branch_days_since_last",
+    0.0286
+   ]
+  ]
+ },
+ "n_train": 289901
+}

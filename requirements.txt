@@ -1,0 +1,10 @@
+# Python 3.12.  Exact versions of the submitted run.
+torch==2.11.0         # the graph model (src/gnn.py).  The submitted model was trained with the CUDA 12.8 build:  pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+                      # (the CPU build is enough to reproduce the predictions from the stored weights)
+numpy==2.5.4
+pandas==3.0.6
+pyarrow==26.0.0
+scipy==1.18.1
+scikit-learn==1.9.1
+xgboost==3.4.1        # only for the feature baseline (scripts/predict_xgb.py, scripts/run_experiments.py)
+matplotlib==3.11.2    # only for scripts/make_charts.py

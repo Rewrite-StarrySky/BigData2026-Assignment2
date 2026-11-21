@@ -1,0 +1,56 @@
+{
+ "model": "graph model (src/gnn.py)",
+ "cutoff": "2026-11-10 12:00:00",
+ "release": "2026-11-10 12:00:00",
+ "gap_hours": 268,
+ "n_test": 4465,
+ "test_users_without_rows_before_cutoff": 0,
+ "n_train_cutoffs": 42,
+ "config": {
+  "d": 64,
+  "layers": 3,
+  "dropout": 0.1,
+  "lr": 0.002,
+  "weight_decay": 1e-05,
+  "epochs": 30,
+  "time_enc": true,
+  "context": true,
+  "max_agg": true
+ },
+ "seeds": 3,
+ "weights_loaded": false,
+ "device": "cuda",
+ "torch": "2.11.0+cu128",
+ "flagged_share": {
+  "open_pr": 0.0775,
+  "open_issue": 0.0475,
+  "issue_comment": 0.0649,
+  "pr_review": 0.0701,
+  "pr_review_comment": 0.0374,
+  "push": 0.5312
+ },
+ "mean_probability": {
+  "open_pr": 0.0769,
+  "open_issue": 0.0475,
+  "issue_comment": 0.0581,
+  "pr_review": 0.0601,
+  "pr_review_comment": 0.0319,
+  "push": 0.4011
+ },
+ "expected_score": {
+  "score": 0.5578167240697446,
+  "macro": 0.5160932353689552,
+  "micro": 0.5995402127705339
+ },
+ "push_min_cover": 0.8,
+ "push_collection_last_7_bins": [
+  0.08,
+  0.33,
+  0.33,
+  0.0,
+  0.0,
+  0.17,
+  0.0
+ ],
+ "seconds": 651
+}
